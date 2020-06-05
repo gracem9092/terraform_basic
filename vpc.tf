@@ -69,3 +69,11 @@ resource "aws_subnet" "private_3" {
     Name = "private_3-demo"
   }
 }
+# Internet Gateway
+resource "aws_internet_gateway" "igw_demo" {
+  vpc_id = aws_vpc.vpc_demo.id
+
+  tags = {
+    Name = "internet-gateway-demo"
+  }
+}
